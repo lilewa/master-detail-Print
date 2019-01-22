@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="T_USER">
+          <Key>
+            <PropertyRef Name="USR_ID" />
+          </Key>
+          <Property Name="USR_ID" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="NAME" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="BMBH" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="USR_PWD" Type="char" MaxLength="6" />
+          <Property Name="KFBH" Type="char" MaxLength="6" />
+          <Property Name="ROLE" Type="char" MaxLength="2" />
+          <Property Name="LXBH" Type="char" MaxLength="1" />
+          <Property Name="PY" Type="char" MaxLength="5" />
+          <Property Name="DHFSQX" Type="char" MaxLength="1" />
+          <Property Name="XG_PXZK_QX" Type="char" MaxLength="1" />
+          <Property Name="WLCHQX" Type="char" MaxLength="1" />
+          <Property Name="XTZY" Type="char" MaxLength="1" />
+          <Property Name="MODIFYDATE" Type="date" />
+          <Property Name="USR_GROUP" Type="char" MaxLength="6" />
+          <Property Name="CZLX" Type="char" MaxLength="4" />
+          <Property Name="CZRQ" Type="date" />
+          <Property Name="HQBH" Type="char" MaxLength="4" />
+          <Property Name="BZ" Type="char" MaxLength="6" />
+          <Property Name="SFZH" Type="char" MaxLength="20" />
+          <Property Name="XB" Type="char" MaxLength="1" />
+          <Property Name="CSRQ" Type="date" />
+          <Property Name="MZ" Type="char" MaxLength="60" />
+          <Property Name="JG" Type="char" MaxLength="60" />
+          <Property Name="WHCD" Type="char" MaxLength="60" />
+          <Property Name="TC" Type="char" MaxLength="200" />
+          <Property Name="ZZ" Type="char" MaxLength="60" />
+          <Property Name="ZD" Type="char" MaxLength="60" />
+          <Property Name="SJ" Type="char" MaxLength="60" />
+          <Property Name="ZP" Type="char" MaxLength="60" />
+          <Property Name="CB" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="T_USER" EntityType="Self.T_USER" Schema="DBWL" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="T_USER">
+          <Key>
+            <PropertyRef Name="USR_ID" />
+          </Key>
+          <Property Name="USR_ID" Type="String" MaxLength="4" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NAME" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="BMBH" Type="String" MaxLength="6" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="USR_PWD" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="KFBH" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="ROLE" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="LXBH" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PY" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="DHFSQX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="XG_PXZK_QX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="WLCHQX" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="XTZY" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="MODIFYDATE" Type="DateTime" />
+          <Property Name="USR_GROUP" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="CZLX" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="CZRQ" Type="DateTime" />
+          <Property Name="HQBH" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="BZ" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="SFZH" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="XB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CSRQ" Type="DateTime" />
+          <Property Name="MZ" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="JG" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="WHCD" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="TC" Type="String" MaxLength="200" FixedLength="true" Unicode="false" />
+          <Property Name="ZZ" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="ZD" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="SJ" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="ZP" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="CB" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="WLEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="T_USER" EntityType="Self.T_USER" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="WLEntities">
+          <EntitySetMapping Name="T_USER">
+            <EntityTypeMapping TypeName="Model.T_USER">
+              <MappingFragment StoreEntitySet="T_USER">
+                <ScalarProperty Name="USR_ID" ColumnName="USR_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="BMBH" ColumnName="BMBH" />
+                <ScalarProperty Name="USR_PWD" ColumnName="USR_PWD" />
+                <ScalarProperty Name="KFBH" ColumnName="KFBH" />
+                <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+                <ScalarProperty Name="LXBH" ColumnName="LXBH" />
+                <ScalarProperty Name="PY" ColumnName="PY" />
+                <ScalarProperty Name="DHFSQX" ColumnName="DHFSQX" />
+                <ScalarProperty Name="XG_PXZK_QX" ColumnName="XG_PXZK_QX" />
+                <ScalarProperty Name="WLCHQX" ColumnName="WLCHQX" />
+                <ScalarProperty Name="XTZY" ColumnName="XTZY" />
+                <ScalarProperty Name="MODIFYDATE" ColumnName="MODIFYDATE" />
+                <ScalarProperty Name="USR_GROUP" ColumnName="USR_GROUP" />
+                <ScalarProperty Name="CZLX" ColumnName="CZLX" />
+                <ScalarProperty Name="CZRQ" ColumnName="CZRQ" />
+                <ScalarProperty Name="HQBH" ColumnName="HQBH" />
+                <ScalarProperty Name="BZ" ColumnName="BZ" />
+                <ScalarProperty Name="SFZH" ColumnName="SFZH" />
+                <ScalarProperty Name="XB" ColumnName="XB" />
+                <ScalarProperty Name="CSRQ" ColumnName="CSRQ" />
+                <ScalarProperty Name="MZ" ColumnName="MZ" />
+                <ScalarProperty Name="JG" ColumnName="JG" />
+                <ScalarProperty Name="WHCD" ColumnName="WHCD" />
+                <ScalarProperty Name="TC" ColumnName="TC" />
+                <ScalarProperty Name="ZZ" ColumnName="ZZ" />
+                <ScalarProperty Name="ZD" ColumnName="ZD" />
+                <ScalarProperty Name="SJ" ColumnName="SJ" />
+                <ScalarProperty Name="ZP" ColumnName="ZP" />
+                <ScalarProperty Name="CB" ColumnName="CB" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

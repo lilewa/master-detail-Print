@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ExecuteReturnInt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceAndForm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dicParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExecuteReturnIntResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteReturnIntResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteReturnTb">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceAndForm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dicParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteReturnTbResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteReturnTbResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteTrans">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceAndForm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExecuteTransResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteTransResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteDynamicSql">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceAndForm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dicParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteDynamicSqlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteDynamicSqlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteDataset">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteDatasetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteDatasetResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchSql">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchSqlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchSqlResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteCheckBoxTable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceAndForm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dicParams" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteCheckBoxTableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteCheckBoxTableResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchTbSqlWhere">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="spaceAndForm" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="funcName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sqlWhere" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchTbSqlWhereResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchTbSqlWhereResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="selectSql" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changedDt">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExecuteUpdateResult" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="errMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExecuteReturnIntSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteReturnInt" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteReturnIntSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteReturnIntResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteReturnTbSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteReturnTb" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteReturnTbSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteReturnTbResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteTransSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteTrans" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteTransSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteTransResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDynamicSqlSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteDynamicSql" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDynamicSqlSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteDynamicSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDatasetSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteDataset" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteDatasetSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteDatasetResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchSqlSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchSql" />
+  </wsdl:message>
+  <wsdl:message name="SearchSqlSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchSqlResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckBoxTableSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteCheckBoxTable" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteCheckBoxTableSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteCheckBoxTableResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchTbSqlWhereSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchTbSqlWhere" />
+  </wsdl:message>
+  <wsdl:message name="SearchTbSqlWhereSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchTbSqlWhereResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteUpdate" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteUpdateResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MainWebServiceSoap">
+    <wsdl:operation name="ExecuteReturnInt">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">执行单条insert,delete,update,返回错误信息的存储过程</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteReturnIntSoapIn" />
+      <wsdl:output message="tns:ExecuteReturnIntSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteReturnTb">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">执行单条select,返回多个信息的存储过程</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteReturnTbSoapIn" />
+      <wsdl:output message="tns:ExecuteReturnTbSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteTrans">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">执行事务，用字符串数组作为每次调用的参数，调用相同的sql语句或是存储过程</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteTransSoapIn" />
+      <wsdl:output message="tns:ExecuteTransSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDynamicSql">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">动态sql查询</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteDynamicSqlSoapIn" />
+      <wsdl:output message="tns:ExecuteDynamicSqlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">直接执行sql语句 return dt</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteDatasetSoapIn" />
+      <wsdl:output message="tns:ExecuteDatasetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchSql">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据 sql查询</wsdl:documentation>
+      <wsdl:input message="tns:SearchSqlSoapIn" />
+      <wsdl:output message="tns:SearchSqlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckBoxTable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">haha</wsdl:documentation>
+      <wsdl:input message="tns:ExecuteCheckBoxTableSoapIn" />
+      <wsdl:output message="tns:ExecuteCheckBoxTableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchTbSqlWhere">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">根据输入的条件查询</wsdl:documentation>
+      <wsdl:input message="tns:SearchTbSqlWhereSoapIn" />
+      <wsdl:output message="tns:SearchTbSqlWhereSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteUpdate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">执行 </wsdl:documentation>
+      <wsdl:input message="tns:ExecuteUpdateSoapIn" />
+      <wsdl:output message="tns:ExecuteUpdateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MainWebServiceSoap" type="tns:MainWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteReturnInt">
+      <soap:operation soapAction="http://tempuri.org/ExecuteReturnInt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteReturnTb">
+      <soap:operation soapAction="http://tempuri.org/ExecuteReturnTb" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteTrans">
+      <soap:operation soapAction="http://tempuri.org/ExecuteTrans" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDynamicSql">
+      <soap:operation soapAction="http://tempuri.org/ExecuteDynamicSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap:operation soapAction="http://tempuri.org/ExecuteDataset" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSql">
+      <soap:operation soapAction="http://tempuri.org/SearchSql" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckBoxTable">
+      <soap:operation soapAction="http://tempuri.org/ExecuteCheckBoxTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTbSqlWhere">
+      <soap:operation soapAction="http://tempuri.org/SearchTbSqlWhere" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteUpdate">
+      <soap:operation soapAction="http://tempuri.org/ExecuteUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MainWebServiceSoap12" type="tns:MainWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecuteReturnInt">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteReturnInt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteReturnTb">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteReturnTb" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteTrans">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteTrans" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDynamicSql">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteDynamicSql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteDataset">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteDataset" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchSql">
+      <soap12:operation soapAction="http://tempuri.org/SearchSql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteCheckBoxTable">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteCheckBoxTable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchTbSqlWhere">
+      <soap12:operation soapAction="http://tempuri.org/SearchTbSqlWhere" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteUpdate">
+      <soap12:operation soapAction="http://tempuri.org/ExecuteUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MainWebService">
+    <wsdl:port name="MainWebServiceSoap" binding="tns:MainWebServiceSoap">
+      <soap:address location="http://localhost/JGWL_WebService/MainWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MainWebServiceSoap12" binding="tns:MainWebServiceSoap12">
+      <soap12:address location="http://localhost/JGWL_WebService/MainWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
