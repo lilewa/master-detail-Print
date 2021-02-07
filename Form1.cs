@@ -14,12 +14,13 @@ using System.Collections.Specialized;
 using System.Deployment.Application;
 using System.Web;
 using Microsoft.Win32;
+using Print.Report.Form_Kfzydd_3F;
 
 namespace Print
 {
     public partial class Form1 : Form
     {
-        NameValueCollection nameValueTable = new NameValueCollection();
+        
         public Form1( )
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace Print
                
 
                 string queryString = ApplicationDeployment.CurrentDeployment.ActivationUri.Query;
-                nameValueTable = HttpUtility.ParseQueryString(queryString);
+                NameValueCollection  nameValueTable = HttpUtility.ParseQueryString(queryString);
 
                 if (nameValueTable.Count == 0)
                     return;
@@ -61,9 +62,17 @@ namespace Print
                     }
                    
                 }
-                else if (form == " ")
+                else if (form == "Form_Kfzydd_3F")
                 {
-
+                    if (func == "phd")
+                    {
+                        RP_JTDJ rpt = new RP_JTDJ(nameValueTable);
+                        using (ReportPrintTool printTool = new ReportPrintTool(rpt))
+                        {
+                             printTool.ShowPreviewDialog();
+                           // printTool.Print();
+                        }
+                    }
                 }
 
             }
@@ -118,17 +127,17 @@ namespace Print
         private void button1_Click(object sender, EventArgs e)
         {
 
-            nameValueTable.Add("ytpch", "231892018050300900001");
-            nameValueTable.Add("bjlsh", "8724523");
-            RP_JTDJ rpt = new RP_JTDJ(nameValueTable);
-            rpt.Parameters["ParamYtpch"].Value = "231892018050300900001";
-            rpt.Parameters["ParamYtpch"].Visible = false;
+            NameValueCollection nameValueTable  = new NameValueCollection();
+            nameValueTable.Add("p_bjlsh", "9595692");
+            rpt_PhdHz rpt = new rpt_PhdHz(nameValueTable);
+            //rpt.Parameters["ParamYtpch"].Value = "231892018050300900001";
+            //rpt.Parameters["ParamYtpch"].Visible = false;
             using (ReportPrintTool printTool = new ReportPrintTool(rpt))
             {
                 // Invoke the Print dialog.
-                // printTool.PrintDialog();
-                printTool.Print();
-                //  printTool.ShowPreviewDialog();
+               //  printTool.PrintDialog();
+               // printTool.Print();
+               printTool.ShowPreviewDialog();
                 // report.p
                 // Send the report to the default printer.
                 //  printTool.Print();

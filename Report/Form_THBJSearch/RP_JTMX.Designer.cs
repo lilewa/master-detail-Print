@@ -65,7 +65,6 @@
             this.xrTableCell12 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell19 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrLine2 = new DevExpress.XtraReports.UI.XRLine();
-            this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
@@ -79,6 +78,7 @@
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLine1 = new DevExpress.XtraReports.UI.XRLine();
+            this.objectDataSource1 = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).BeginInit();
@@ -473,16 +473,10 @@
             // 
             this.xrLine2.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrLine2.Dpi = 254F;
-            this.xrLine2.LineWidth = 3;
             this.xrLine2.LocationFloat = new DevExpress.Utils.PointFloat(25.40002F, 0F);
             this.xrLine2.Name = "xrLine2";
             this.xrLine2.SizeF = new System.Drawing.SizeF(2049.6F, 14.28757F);
             this.xrLine2.StylePriority.UseBorders = false;
-            // 
-            // objectDataSource1
-            // 
-            this.objectDataSource1.DataSource = typeof(Print.Schema.JTMX);
-            this.objectDataSource1.Name = "objectDataSource1";
             // 
             // PageFooter
             // 
@@ -632,10 +626,14 @@
             // xrLine1
             // 
             this.xrLine1.Dpi = 254F;
-            this.xrLine1.LineWidth = 3;
             this.xrLine1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25.39993F);
             this.xrLine1.Name = "xrLine1";
             this.xrLine1.SizeF = new System.Drawing.SizeF(2075F, 14.28757F);
+            // 
+            // objectDataSource1
+            // 
+            this.objectDataSource1.DataSource = typeof(Print.Schema.JTMX);
+            this.objectDataSource1.Name = "objectDataSource1";
             // 
             // RP_JTMX
             // 
@@ -657,7 +655,7 @@
             this.ReportUnit = DevExpress.XtraReports.UI.ReportUnit.TenthsOfAMillimeter;
             this.SnapGridSize = 25F;
             this.SnapGridStepCount = 1;
-            this.Version = "17.2";
+            this.Version = "18.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource1)).EndInit();

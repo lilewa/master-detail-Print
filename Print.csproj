@@ -57,10 +57,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>68F70D18EF2EC2E4BA0E014D0AD50CC0BA1D1062</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>05F631D235D453FBAE855E0FE67D8589A583E929</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Print_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -69,25 +70,27 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.14.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -115,11 +118,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +144,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\KuaiDi\rpt_BeijingTengYuChangDa.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_BeijingTengYuChangDa.Designer.cs">
+      <DependentUpon>rpt_BeijingTengYuChangDa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_BeijingYiDuo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_BeijingYiDuo.Designer.cs">
+      <DependentUpon>rpt_BeijingYiDuo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_BejingShiSu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_BejingShiSu.Designer.cs">
+      <DependentUpon>rpt_BejingShiSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Form_Kfzydd_3F\rpt_PhdHz.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Form_Kfzydd_3F\rpt_PhdHz.Designer.cs">
+      <DependentUpon>rpt_PhdHz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Form_Kfzydd_3F\rpt_PhdMx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\Form_Kfzydd_3F\rpt_PhdMx.Designer.cs">
+      <DependentUpon>rpt_PhdMx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report\Form_THBJSearch\RP_JTDJ.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -158,8 +186,34 @@
     <Compile Include="Report\Form_THBJSearch\RP_JTMX.Designer.cs">
       <DependentUpon>RP_JTMX.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report\KuaiDi\rpt_ShengFeng.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_ShengFeng.Designer.cs">
+      <DependentUpon>rpt_ShengFeng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_TianjinPuYong.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_TianjinPuYong.Designer.cs">
+      <DependentUpon>rpt_TianjinPuYong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_WoJiaShunChang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_WoJiaShunChang.Designer.cs">
+      <DependentUpon>rpt_WoJiaShunChang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_YiCheng.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\KuaiDi\rpt_YiCheng.Designer.cs">
+      <DependentUpon>rpt_YiCheng.cs</DependentUpon>
+    </Compile>
     <Compile Include="Schema\JTDJ.cs" />
     <Compile Include="Schema\JTMX.cs" />
+    <Compile Include="Schema\PhdHz.cs" />
+    <Compile Include="Schema\PhdMx.cs" />
     <Compile Include="Service References\MainWebService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -185,6 +239,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\Form_Kfzydd_3F\rpt_PhdHz.resx">
+      <DependentUpon>rpt_PhdHz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Form_Kfzydd_3F\rpt_PhdMx.resx">
+      <DependentUpon>rpt_PhdMx.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Report\Form_THBJSearch\RP_JTDJ.resx">
       <DependentUpon>RP_JTDJ.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,17 +258,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>WLModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DataSet1.xsc">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="DataSet1.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
-    </None>
-    <None Include="DataSet1.xss">
-      <DependentUpon>DataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Model\WLModel.edmx.diagram">
       <DependentUpon>WLModel.edmx</DependentUpon>
     </None>
@@ -271,6 +320,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\MainWebService\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
